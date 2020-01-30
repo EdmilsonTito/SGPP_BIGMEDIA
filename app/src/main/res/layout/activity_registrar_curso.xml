@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrarCurso">
+
+
+    <TextView
+        android:id="@+id/textcima"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registo de Curso"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textAlignment="center"/>
+
+    <ImageView
+        android:id="@+id/imagemCarregada"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textcima"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/sem_foto" />
+
+
+    <ScrollView
+        android:id="@+id/scrolwiew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imagemCarregada">
+
+        <RelativeLayout
+            android:id="@+id/arearegistoE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/registoE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:id="@+id/nomeE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editcodigo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="Codigo"
+                        android:inputType="number"
+                        android:textColorHint="#07388e" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nifE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nomeE">
+
+                    <EditText
+                        android:id="@+id/editNome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="Nome"
+                        android:inputType="text|textCapCharacters"
+                        android:textColorHint="#07388e" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/emailE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nifE">
+
+                    <EditText
+                        android:id="@+id/editCategoria"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="Categoria"
+                        android:textColorHint="#07388e" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/contactoE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/emailE">
+
+                    <EditText
+                        android:id="@+id/editProfessor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="20dp"
+                        android:hint="Professor"
+                        android:inputType="text"
+                        android:textColorHint="#07388e" />
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnregistar"
+                android:layout_width="124dp"
+                android:layout_height="43dp"
+                android:layout_below="@+id/registoE"
+                android:layout_centerHorizontal="true"
+                android:text="Registar"
+                android:layout_marginTop="20dp"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btncarregarNovaCampanha"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_below="@+id/btnregistar"
+                android:layout_height="wrap_content"
+                android:text="Carregar Nova Campanha"/>
+
+            <ListView
+                android:id="@+id/cursilistview"
+                android:layout_below="@+id/btncarregarNovaCampanha"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:visibility="visible"/>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

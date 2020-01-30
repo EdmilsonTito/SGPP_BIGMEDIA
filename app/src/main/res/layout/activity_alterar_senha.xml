@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="2dp"
+    android:orientation="vertical"
+    tools:context=".AlterarSenha">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/LPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:id="@+id/textAute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alteração da Senha"
+                android:textColor="#000"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/campos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_below="@id/LPrincipal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textsenhaAntiga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Senha Antiga"
+                android:textColor="#0d0c0c"
+                android:textSize="15sp"
+                android:textStyle="bold|italic" />
+
+            <EditText
+                android:id="@+id/EdtpassAntiga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textSenha"
+                android:hint="Inserir senha Antiga"
+                android:textSize="15sp"
+                android:textColor="#0d0c0c"
+                android:inputType="textPassword"
+                android:digits="0123456789-_@.,abcdefghijklmnopqrstuvxwyzABCDEFGHIJKLMNOPQRSTUVXWYZ"
+                android:textStyle="italic" />
+            <TextView
+                android:id="@+id/textSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nova Senha"
+                android:textColor="#0d0c0c"
+                android:textSize="15sp"
+                android:textStyle="bold|italic" />
+
+            <EditText
+                android:id="@+id/EdtpassNova"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textSenha"
+                android:hint="Inserir nova senha"
+                android:digits="0123456789_@-.,abcdefghijklmnopqrstuvxwyzABCDEFGHIJKLMNOPQRSTUVXWYZ"
+                android:textSize="15sp"
+                android:textColor="#0d0c0c"
+                android:inputType="textPassword"
+                android:textStyle="italic"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_below="@id/campos"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAlterarSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"
+                android:backgroundTint="#FFB90707"
+                android:text="Alterar Senha"
+                android:textSize="12sp"
+                android:textStyle="bold|italic" />
+
+            <ProgressBar
+                android:id="@+id/pbalSenha"
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:visibility="invisible"/>
+        </LinearLayout>
+</RelativeLayout>
+</RelativeLayout>

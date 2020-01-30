@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TelaLogin">
+
+    <RelativeLayout
+        android:id="@+id/Lgeral"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/painelogin"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:id="@+id/LPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <LinearLayout
+                android:id="@+id/cabeçalho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/logo_login"
+                    android:onClick="registar"/>
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#0d0c0c"
+                    android:text="@string/tituloLogin"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/textAute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Autenticação"
+                android:layout_marginTop="7dp"
+                android:textColor="#0d0c0c"
+                android:layout_below="@id/cabeçalho"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/LPrincipal"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="100dp">
+
+
+        <RelativeLayout
+            android:id="@+id/campos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textSize="15sp"
+                android:textColor="#0d0c0c"
+                android:textStyle="bold|italic" />
+
+            <EditText
+                android:id="@+id/EdtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textLogin"
+                android:hint="Email"
+                android:textSize="15sp"
+                android:maxLines="1"
+                android:cursorVisible="true"
+                android:maxLength="50"
+                android:digits="0123456789_@-.,abcdefghijklmnopqrstuvxwyzABCDEFGHIJKLMNOPQRSTUVXWYZ"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/textSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/EdtEmail"
+                android:text="Senha"
+                android:textColor="#0d0c0c"
+                android:textSize="15sp"
+                android:textStyle="bold|italic" />
+
+            <EditText
+                android:id="@+id/EdtSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textSenha"
+                android:maxLines="1"
+                android:maxLength="50"
+                android:digits="0123456789._-@,abcdefghijklmnopqrstuvxwyzABCDEFGHIJKLMNOPQRSTUVXWYZ"
+                android:hint="Senha"
+                android:textSize="15sp"
+                android:textColor="#0d0c0c"
+                android:inputType="textPassword"
+                android:textStyle="italic" />
+
+
+            <Button
+                android:id="@+id/btnAutenticar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/EdtSenha"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#FFB90707"
+                android:text="Autenticar"
+                android:textColor="#FDFDFD"
+                android:textSize="12dp"
+                android:textStyle="bold|italic" />
+
+            <ProgressBar
+                android:id="@+id/pblogin"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/EdtSenha"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        </ScrollView>
+
+        </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

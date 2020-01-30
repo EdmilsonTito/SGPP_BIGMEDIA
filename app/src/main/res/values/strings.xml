@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SGPP - BigMedia</string>
+    <string name="tituloLogin">Sistema de Gestão de Painéis Publicitários</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="normal_map">Normal Map</string>
+    <string name="hybrid_map">Hybrid Map</string>
+    <string name="satellite_map">Satellite Map</string>
+    <string name="terrain_map">Terrian Map</string>
+    <string name="ip">http://192.168.1.102:8080/BigMedia</string>
+    //http://192.168.43.10 - ip do PC dos José
+</resources>
